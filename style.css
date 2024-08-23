@@ -10,7 +10,6 @@ body {
     gap: 5vh;
     padding-bottom: 5vh;
     background-color: royalblue;
-    height: 90vh;
 }
 
 #innerContainer {
@@ -43,4 +42,9 @@ body {
     background-color: white;
     border-style: solid;
     border-color: royalblue;
+    border-width: 0;
+}
+
+#colorBox {
+    background-color: brown;
 }
