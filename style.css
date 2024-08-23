@@ -6,8 +6,11 @@ body {
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
-    margin-top: 3vh;
+    padding-top: 5vh;
     gap: 5vh;
+    padding-bottom: 5vh;
+    background-color: royalblue;
+    height: 90vh;
 }
 
 #innerContainer {
@@ -18,7 +21,6 @@ body {
     justify-content: center;
     align-items: center;
     align-content: center;
-    gap: 1px;
 }
 
 #changeBoxes {
@@ -29,8 +31,10 @@ body {
 }
 
 .box {
+    box-sizing: border-box;
     flex-basis: auto;
     aspect-ratio: 1 / 1;
-    width: 23%;
     background-color: aquamarine;
+    border-style: solid;
+    border-color: royalblue;
 }
