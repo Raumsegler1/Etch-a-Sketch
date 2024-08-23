@@ -27,6 +27,12 @@ body {
     flex-grow: 0;
     padding: 20px 40px;
     font-size: 36px;
+    border-radius: 8px;
+    background-color: white;
+    border-style: solid;
+    border-color: Black;
+    border-width: 3px;
+    box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
 
 }
 
@@ -34,7 +40,7 @@ body {
     box-sizing: border-box;
     flex-basis: auto;
     aspect-ratio: 1 / 1;
-    background-color: aquamarine;
+    background-color: white;
     border-style: solid;
     border-color: royalblue;
 }
