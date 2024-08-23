@@ -1,0 +1,36 @@
+body {
+    margin: 0;
+}
+#outerContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 3vh;
+    gap: 5vh;
+}
+
+#innerContainer {
+    flex-grow: 1;
+    width: 1000px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 1px;
+}
+
+#changeBoxes {
+    flex-grow: 0;
+    padding: 20px 40px;
+    font-size: 36px;
+
+}
+
+.box {
+    flex-basis: auto;
+    aspect-ratio: 1 / 1;
+    width: 23%;
+    background-color: aquamarine;
+}
