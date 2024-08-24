@@ -53,13 +53,11 @@ function changeBoxLayout() {
         innerContainer.appendChild(box);
 
         box.addEventListener("mouseenter", () => {
-            changeColor(box, "brown"); changeBorder(box) // Pass the specific box to change its color
+            changeColor(box, `hsl(${randomNumber(360, true)}, ${randomNumber(100, true)}%, ${randomNumber(100, true)}%`); changeBorder(box); changeOpacity(box); // Pass the specific box to change its color
         });
     }
 
 }
-
-//; border-width: ${50 / BoxAmountOverall}px;
 
 function changeColor(element, color) {
     element.style.backgroundColor = color; // Change this to any color you like
@@ -68,5 +66,13 @@ function changeColor(element, color) {
 function changeBorder(element) {
     element.style.borderRadius = "0px";
 }
+function randomNumber(multiplier, rounded) {
+    if (rounded) {
+    return Math.floor(Math.random()*multiplier);
+    } else {
+        return Math.random()*multiplier;
+    }
+}
+
 
 changeBoxLayout();
