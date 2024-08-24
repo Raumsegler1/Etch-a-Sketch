@@ -1,5 +1,8 @@
 body {
     margin: 0;
+    background-color: royalblue;
+    display: flex;
+    justify-content: center;
 }
 #outerContainer {
     display: flex;
@@ -10,11 +13,13 @@ body {
     gap: 5vh;
     padding-bottom: 5vh;
     background-color: royalblue;
+    width: 1000px;
 }
 
 #innerContainer {
     flex-grow: 1;
-    width: 1000px;
+    flex-basis: auto;
+    width: 40%;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
@@ -32,7 +37,7 @@ body {
     border-color: Black;
     border-width: 3px;
     box-shadow: 12px 12px 2px 1px rgba(0, 0, 0, 0.2);
-
+    margin: 0px 30px;
 }
 
 .box {
@@ -42,8 +47,5 @@ body {
     background-color: white;
     border-style: solid;
     border-width: 0;
-}
-
-#colorBox {
-    background-color: brown;
+    flex-shrink: 1;
 }

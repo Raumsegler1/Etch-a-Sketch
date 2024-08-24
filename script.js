@@ -2,7 +2,7 @@ const innerContainer = document.querySelector("#innerContainer");
 const changeBoxesButton = document.querySelector("#changeBoxes");
 
 changeBoxesButton.addEventListener("click", () => {getBoxAmount(); changeBoxLayout()});
-changeBoxesButton.addEventListener("mouseenter", () => {changeColor(changeBoxesButton, "brown")});
+changeBoxesButton.addEventListener("mouseenter", () => {changeColor(changeBoxesButton, randomColor())});
 changeBoxesButton.addEventListener("mouseleave", () => {changeColor(changeBoxesButton, "white")});
 innerContainer.addEventListener("mouseleave", () => changeBoxLayout())
 let BoxAmountHorizontal = 4;
@@ -49,16 +49,18 @@ function changeBoxLayout() {
     for (let i = 0; i < BoxAmountOverall; i++) {
         const box = document.createElement("div");
         box.setAttribute("class", "box");
-        box.setAttribute("style", `width: ${100 / BoxAmountHorizontal}%; border-radius: ${120 / BoxAmountHorizontal}px`);
+        box.setAttribute("style", `width: ${100 / BoxAmountHorizontal}%; border-radius: ${90 / BoxAmountHorizontal}px`);
         innerContainer.appendChild(box);
 
         box.addEventListener("mouseenter", () => {
-            changeColor(box, `hsl(${randomNumber(360, true)}, ${randomNumber(100, true)}%, ${randomNumber(100, true)}%`); changeBorder(box); changeOpacity(box, "10", "true"); // Pass the specific box to change its color
+            changeColor(box, randomColor()); changeBorder(box); changeOpacity(box, "10", "true"); // Pass the specific box to change its color
         });
     }
 
 }
-
+function randomColor() {
+    return `hsl(${randomNumber(360, true)}, ${randomNumber(100, true)}%, ${randomNumber(100, true)}%`
+}
 function changeColor(element, color) {
     element.style.backgroundColor = color;
 }
