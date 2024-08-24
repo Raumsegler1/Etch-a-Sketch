@@ -53,14 +53,14 @@ function changeBoxLayout() {
         innerContainer.appendChild(box);
 
         box.addEventListener("mouseenter", () => {
-            changeColor(box, `hsl(${randomNumber(360, true)}, ${randomNumber(100, true)}%, ${randomNumber(100, true)}%`); changeBorder(box); changeOpacity(box); // Pass the specific box to change its color
+            changeColor(box, `hsl(${randomNumber(360, true)}, ${randomNumber(100, true)}%, ${randomNumber(100, true)}%`); changeBorder(box); changeOpacity(box, "10", "true"); // Pass the specific box to change its color
         });
     }
 
 }
 
 function changeColor(element, color) {
-    element.style.backgroundColor = color; // Change this to any color you like
+    element.style.backgroundColor = color;
 }
 
 function changeBorder(element) {
@@ -72,6 +72,24 @@ function randomNumber(multiplier, rounded) {
     } else {
         return Math.random()*multiplier;
     }
+}
+
+function changeOpacity(element, amount, negativ) {
+    // Get the current opacity value (default to 1 if not set)
+    let currentOpacity = parseFloat(window.getComputedStyle(element).opacity);
+    
+    // Calculate the new opacity based on the amount and the negativ flag
+    if (negativ) {
+        currentOpacity -= (amount / 100);
+    } else {
+        currentOpacity += (amount / 100);
+    }
+    
+    // Ensures the new opacity is within the valid range (0 to 1)
+    currentOpacity = Math.max(0, Math.min(1, currentOpacity));
+    
+    // Sets the new opacity value
+    element.style.opacity = currentOpacity;
 }
 
 
